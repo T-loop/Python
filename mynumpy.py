@@ -1,8 +1,6 @@
-from matplotlib import pyplot as plt
-from numpy import random
+import matplotlib.pyplot as plt
 import seaborn as sns
 
-ran=random.randint(100, size=(3))
-sns.displot(ran)
-plt.show()
+sns.displot([0, 1, 2, 35, 4, 5])
 
+plt.show()
