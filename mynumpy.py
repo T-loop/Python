@@ -1,5 +1,8 @@
+from matplotlib import pyplot as plt
 from numpy import random
+import seaborn as sns
 
-x = random.choice([3, 5, 7, 9], size=(100, 5))
+ran=random.randint(100, size=(3))
+sns.displot(ran)
+plt.show()
 
-print(x)
