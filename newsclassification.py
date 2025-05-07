@@ -57,6 +57,6 @@ def predict(text, word_counts, class_counts, total_words, vocabulary):
 word_counts, class_counts, total_words, vocabulary = train(informatikdic)
 
 # Beispiel-Vorhersage
-textbeingpredict = "ich bin glücklich und zufrieden"
+textbeingpredict = "Messi gewinnt gegen Bayern München"
 result = predict(textbeingpredict, word_counts, class_counts, total_words, vocabulary)
 print("Vorhersage:", result)
