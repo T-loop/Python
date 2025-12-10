@@ -1,7 +1,7 @@
 import math
 from collections import Counter
 
-# 🧠 Funktion, um Entropie zu berechnen (also wie unordentlich die Antworten sind)
+# Funktion, um Entropie zu berechnen (also wie unordentlich die Antworten sind)
 def berechne_entropie(daten):
     label_liste = [eintrag[-1] for eintrag in daten]  # letzte Spalte = Entscheidung (z.B. "ja", "nein")
     zaehler = Counter(label_liste)  # wie oft kommt "ja" und "nein" vor?
@@ -13,14 +13,14 @@ def berechne_entropie(daten):
 
     return entropie
 
-# 🌳 Funktion, um den besten Attribut (Spalte) zu finden, mit dem man die besten Fragen stellen kann
+ #Funktion, um den besten Attribut (Spalte) zu finden, mit dem man die besten Fragen stellen kann
 def finde_bestes_attribut(daten):
     anzahl_attribute = len(daten[0]) - 1  # letzte Spalte ist die Antwort, die überspringen wir
     grund_entropie = berechne_entropie(daten)
     bester_gain = 0.0
     bestes_attribut = -1
 
-    # 🔍 Wir schauen jede Spalte (außer der letzten) an
+    # Wir schauen jede Spalte (außer der letzten) an
     for i in range(anzahl_attribute):
         werte = set([eintrag[i] for eintrag in daten])  # mögliche Werte in dieser Spalte
         neue_entropie = 0.0
@@ -38,15 +38,15 @@ def finde_bestes_attribut(daten):
 
     return bestes_attribut
 
-# 🧱 Hauptfunktion zum Erstellen des Entscheidungsbaums
+#  Hauptfunktion zum Erstellen des Entscheidungsbaums
 def baue_baum(daten, attribut_namen):
     labels = [eintrag[-1] for eintrag in daten]
 
-    # 🛑 Wenn alle Labels gleich sind, brauchen wir nicht weiter fragen
+    #  Wenn alle Labels gleich sind, brauchen wir nicht weiter fragen
     if labels.count(labels[0]) == len(labels):
         return labels[0]
 
-    # 🛑 Wenn keine Attribute mehr übrig sind
+    #  Wenn keine Attribute mehr übrig sind
     if len(daten[0]) == 1:
         return Counter(labels).most_common(1)[0][0]  # häufigste Antwort zurückgeben
 
@@ -64,7 +64,7 @@ def baue_baum(daten, attribut_namen):
 
     return baum
 
-# 🌞 Unsere kleinen Beispieldaten (Wetter, Temperatur, Spielen)
+#  Unsere kleinen Beispieldaten (Wetter, Temperatur, Spielen)
 daten = [
     ["sonnig", "warm", "ja"],
     ["sonnig", "kalt", "nein"],
@@ -75,10 +75,10 @@ daten = [
 
 attribut_namen = ["Wetter", "Temperatur"]
 
-# 🌳 Entscheidungsbaum bauen
+#  Entscheidungsbaum bauen
 baum = baue_baum(daten, attribut_namen)
 print("hello")
 
-# 🖨️ Baum anzeigen
+# 🖨 Baum anzeigen
 import pprint
 pprint.pprint(baum)
