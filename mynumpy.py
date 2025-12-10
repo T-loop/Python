@@ -19,9 +19,9 @@ def tagebuch_anzeigen():
         print("Noch keine Einträge vorhanden.\n")
 
 
-# 🔄 Hauptmenü-Schleife
+#  Hauptmenü-Schleife
 while True:
-    print("📝 Tagebuch-Menü:")
+    print(" Tagebuch-Menü:")
     print("1 - Neuen Eintrag hinzufügen")
     print("2 - Tagebuch anzeigen")
     print("3 - Beenden")
