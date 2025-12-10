@@ -79,6 +79,6 @@ attribut_namen = ["Wetter", "Temperatur"]
 baum = baue_baum(daten, attribut_namen)
 print("hello")
 
-# 🖨 Baum anzeigen
+# Baum anzeigen
 import pprint
 pprint.pprint(baum)
