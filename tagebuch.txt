@@ -1,7 +1,0 @@
-hello
-hello
-itsme
-ok
-itsme 
-2
-3
