@@ -28,6 +28,10 @@ X_mean = X.mean(dim=0)
 X_std = X.std(dim=0)
 X = (X - X_mean) / X_std
 
+y_mean = y.mean()
+y_std = y.std()
+y = (y - y_mean) / y_std
+
 class CarPriceNet(nn.Module):
     def __init__(self):
         super().__init__()
@@ -55,10 +59,12 @@ for epoch in range(epochs):
     loss.backward()
     optimizer.step()
     if epoch % 50 == 0:
-        print(f"Epoch {epoch:03d} | RMSE: {loss.sqrt().item():.2f} €")
+        print(f"Epoch {epoch:03d} | RMSE: {loss.sqrt().item():.4f}")
 
-test_car = torch.tensor([[2018., 60000., 150., 6.5, 4.]])
+test_car = torch.tensor([[2005., 129000., 130., 10., 4.]])
 test_car = (test_car - X_mean) / X_std
-predicted_price = model(test_car)
 
-print(int(predicted_price.item()))
+pred_norm = model(test_car)
+pred_price = pred_norm * y_std + y_mean
+
+print(int(pred_price.item()))
