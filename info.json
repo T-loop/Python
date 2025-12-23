@@ -1,0 +1,13 @@
+[
+  {"text": "Bayern München gewinnt das Spiel mit 3 zu 1", "label": "Sport"},
+  {"text": "Das Champions-League-Finale war spannend", "label": "Sport"},
+  {"text": "Die deutsche Nationalmannschaft trainiert in Berlin", "label": "Sport"},
+
+  {"text": "Die Bundesregierung beschließt neue Steuerreform", "label": "Politik"},
+  {"text": "Im Bundestag wird über das Klimagesetz debattiert", "label": "Politik"},
+  {"text": "Angela Merkel spricht auf dem EU-Gipfel", "label": "Politik"},
+
+  {"text": "Apple stellt das neue iPhone 15 vor", "label": "Technik"},
+  {"text": "Google investiert in künstliche Intelligenz", "label": "Technik"},
+  {"text": "Samsung bringt faltbares Smartphone auf den Markt", "label": "Technik"}
+]
