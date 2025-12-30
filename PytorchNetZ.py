@@ -16,7 +16,7 @@ class MiniNet(nn.Module):
         return x
 
 
-model = MiniNet()
+model = MiniNet()  #netz
 
 inputs = torch.randn(32, 10)
 targets = torch.randn(32, 1)

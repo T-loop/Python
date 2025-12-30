@@ -8,7 +8,7 @@ def berechne_entropie(daten):
     entropie = 0.0
 
     for label in zaehler:
-        wahrscheinlichkeit = zaehler[label] / len(daten)  # Anteil dieses Labels
+        wahrscheinlichkeit = zaehler[label] / len(daten)  # Anteil dieses Labelsss
         entropie -= wahrscheinlichkeit * math.log2(wahrscheinlichkeit)  # Formel für Entropie
 
     return entropie

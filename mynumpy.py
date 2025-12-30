@@ -6,7 +6,7 @@ def tagebuch_eintrag_schreiben():
                 break
             datei.write(eintrag + "\n")
         print("Einträge gespeichert.\n")
-
+#ok
 
 def tagebuch_anzeigen():
     try:

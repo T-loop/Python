@@ -21,7 +21,7 @@ class SimpleNN:
         y = self.sigmoid(z2)
         return y
 
-# Nutzung
+# Nutz
 nn = SimpleNN()
 x = np.array([1.0, 2.0])
 output = nn.forward(x)

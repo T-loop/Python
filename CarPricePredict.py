@@ -35,7 +35,7 @@ y = (y - y_mean) / y_std
 class CarPriceNet(nn.Module):
     def __init__(self):
         super().__init__()
-        self.fc1 = nn.Linear(5, 32)
+        self.fc1 = nn.Linear(5, 32) # ausgabe 32 fired neuron
         self.fc2 = nn.Linear(32, 16)
         self.fc3 = nn.Linear(16, 1)
         self.relu = nn.ReLU()

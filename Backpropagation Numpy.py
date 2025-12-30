@@ -75,7 +75,7 @@ for epoch in range(epochs):
     W1 -= eta * dW1
     b1 -= eta * db1
 
-
+#ok
     if (epoch+1) % 10 == 0:
         print(f"Epoche {epoch+1}, Loss: {loss:.4f}, Output: {a3.ravel()[0]:.4f}")
 
